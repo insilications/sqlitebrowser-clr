@@ -21,6 +21,6 @@ set(QHEXEDIT_MOC_HDR
 	src/commands.h
 )
 
-add_library(qhexedit ${QHEXEDIT_SRC} ${QHEXEDIT_HDR} ${QHEXEDIT_MOC})
+add_library(qhexedit STATIC ${QHEXEDIT_SRC} ${QHEXEDIT_HDR} ${QHEXEDIT_MOC})
 
 target_link_libraries(qhexedit Qt5::Widgets)

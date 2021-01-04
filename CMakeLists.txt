@@ -15,7 +15,7 @@ endif()
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake" "${CMAKE_MODULE_PATH}")
 
 OPTION(ENABLE_TESTING "Enable the unit tests" OFF)
-OPTION(FORCE_INTERNAL_QSCINTILLA "Don't use the distribution's QScintilla library even if there is one" OFF)
+OPTION(FORCE_INTERNAL_QSCINTILLA "Don't use the distribution's QScintilla library even if there is one" ON)
 OPTION(FORCE_INTERNAL_QCUSTOMPLOT "Don't use distribution's QCustomPlot even if available" ON)
 OPTION(FORCE_INTERNAL_QHEXEDIT "Don't use distribution's QHexEdit even if available" ON)
 OPTION(ALL_WARNINGS "Enable some useful warning flags" OFF)
@@ -497,6 +497,15 @@ endif()
 
 if(NOT WIN32)
 	install(TARGETS ${PROJECT_NAME}
+		RUNTIME DESTINATION bin
+		LIBRARY DESTINATION lib)
+	install(TARGETS qhexedit
+		RUNTIME DESTINATION bin
+		LIBRARY DESTINATION lib)
+	install(TARGETS qcustomplot
+		RUNTIME DESTINATION bin
+		LIBRARY DESTINATION lib)
+	install(TARGETS qscintilla2
 		RUNTIME DESTINATION bin
 		LIBRARY DESTINATION lib)
 endif()

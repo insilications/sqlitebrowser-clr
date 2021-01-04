@@ -172,7 +172,7 @@ QT5_WRAP_CPP(QSCINTILLA_WRAP_MOC_HDR ${QSCINTILLA_MOC_HDR})
 
 include_directories(. ../include ../lexlib ../src)
 
-add_library(qscintilla2 ${QSCINTILLA_SRC} ${QSCINTILLA_HDR} ${QSCINTILLA_MOC_HDR} ${QSCINTILLA_MOC} ${QSCINTILLA_WRAP_MOC_HDR})
+add_library(qscintilla2 STATIC ${QSCINTILLA_SRC} ${QSCINTILLA_HDR} ${QSCINTILLA_MOC_HDR} ${QSCINTILLA_MOC} ${QSCINTILLA_WRAP_MOC_HDR})
 
 target_link_libraries(qscintilla2 Qt5::Widgets Qt5::PrintSupport)
 

@@ -16,6 +16,6 @@ set(QCUSTOMPLOT_MOC_HDR
 	qcustomplot.h
 )
 
-add_library(qcustomplot ${QCUSTOMPLOT_SRC} ${QCUSTOMPLOT_HDR} ${QCUSTOMPLOT_MOC})
+add_library(qcustomplot STATIC ${QCUSTOMPLOT_SRC} ${QCUSTOMPLOT_HDR} ${QCUSTOMPLOT_MOC})
 
 target_link_libraries(qcustomplot Qt5::Widgets Qt5::PrintSupport)
